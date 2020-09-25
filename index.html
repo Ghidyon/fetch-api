@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Practice</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <style>
+        li {
+            list-style: none;
+            font-family: "Lato", monospace;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="btn">Get API</button>
+        <div id="god"></div>
+    </div>
+
+    <script src="main.js"></script>
+    <!-- 
+    <script>
+        var _name;
+        _name = 'Hello';
+        console.log(name);
+
+        //name is an identifier ie the name of the variable
+        /*
+            Rules to declaring variables
+        * Must not start with a number
+        * Can start with an underscore (not advisable)
+        * its preferrable having an underscore inside a variable name
+        * Can start with a dollar symbol
+        * Its advisable to stick with camel case e.g gainJohn,;
+        * pascal case = GainJohn
+        */
+
+        let gain = "Hello"
+        console.log(gain);
+
+        /*
+            "let" is more of an ES6 syntax
+
+            After writing your codes in ES6, you can transpile(convert) them to ES5.
+        */
+
+        const ghidyon = 'Hello Gain';
+        console.log(ghidyon);
+
+        //const doesnt change once a value is assigned to it.
+
+        //Primitive data type is stored in stack memory while the reference datatype are stored in heap
+        let me = 2;
+        console.log(typeof me);
+
+        //Boolean is a true or false value
+        let my = true;
+        console.log(typeof my);
+
+        let mine = null;
+        console.log(typeof mine);
+        //make a research on why null outputs as object.
+
+        /*
+            Type conversion, Type coercion Type casting
+        */
+        let ghid = Symbol();
+        console.log(typeof ghid);
+
+        var y = '333';
+        console.log(y);
+        console.log(typeof y);
+        var why = Number(y);
+        console.log(why);
+        console.log(typeof why);
+
+
+        //Math Operators
+
+        //Modulus is basically the remainder after dividing numbers
+        var x = 4;
+        var y = 3;
+        var sum = x % y;
+
+        console.log(sum);
+
+        //Math operations
+        // var z = Math.PI; //outputs pi mathematical constant
+        // console.log(z);
+
+        const a = Math.abs(-3);
+        console.log(a)
+
+        const z = Math.pow(3, 5);
+        console.log(z)
+
+
+        //Order of Precedence PEDMAS
+        /*
+            P - Parenthesis
+            E - Exponential
+            D - Division
+            M - Multiplication
+            A - Addition
+            S - Subtraction
+        */
+
+        // const b = Math.min(3, 7, 2, 5);
+        // console.log(b);
+
+        const b = Math.max(3, 7, 2, 5);
+        console.log(b);
+
+        const c = Math.ceil(7.2); //rounds up
+        console.log(c);
+
+        const d = Math.floor(7.2); //rounds down
+        console.log(d);
+
+        //Addition operator and concatenation
+        //when the two operands are two strings, or one, it'll add as a concatenation
+
+        let ab = '3';
+        let ba = '2';
+        console.log(ab - ba);//Why does this happen output -1?
+
+        //Escape characters
+        let us = 'I\'m tired of all this';
+        console.log(us);
+        //or 
+        let we = "I'm tired of writing";
+        console.log(we);
+
+        //String
+
+        let firstName = 'Ghidyon';
+        let title = "dev_"
+        //length - helps to count the characters of the string including spaces.
+        console.log(firstName.length);
+        console.log(firstName.toUpperCase()); //converts the value to display in uppercase
+        console.log(firstName.toLowerCase());
+        console.log(title.concat(firstName)); //appends strings together
+
+        console.log(firstName.indexOf('d')); //returns the position of where the character is located
+        console.log(firstName.lastIndexOf(''));
+        console.log(firstName.split(''))
+        console.log(firstName.includes('gh'))  //remember, this works with cases
+
+        //Template Literals
+        //An ES6 Syntax
+
+        let myName = 'Ghidyon';
+        let myFullName = 'frontend mumu'
+
+        console.log(`${myName} and ${myFullName}`); //makes it easier to concatenate strings
+
+
+
+        //Assignment from @Gain
+
+        /*1. Conversion from Fahrenheit to Celsius
+            F = 9/5C + 32
+            Use prompts to make the user input the celsuis.
+        */
+
+        //2. Explain how javascripts run on a web broswser
+        //3. Prove using turings completeness, how css and html is not a programming language
+
+        //Arrays
+
+        let names = ['Gain', 'Gideon', 'Thrive', 'River'];
+        names[4] = 'Nevis';
+        console.log(names);
+        //let names = new Array['Gain', 'Gideon', 'Thrive', 'River'];
+
+        //we can have so many data types in an array.
+
+        //Methods for Arrays
+
+        //length 
+        console.log(names.length);
+
+        //push adds an item to the end of the array
+        names.push('Abiodun');
+        console.log(names);
+
+        //pop helps removes items from the end of the array
+        names.pop();
+        console.log(names);
+
+        //unshift helps to add item from the beginning of the array
+        names.unshift('Steve');
+        console.log(names);
+
+        //shift helps to remove item from the beginning of the array
+        names.shift();
+        console.log(names);
+
+        //Array.isArray helps to check if a variable's data type is an array
+        console.log(Array.isArray(names));
+
+        //splice(start index, no of items to be removed) helps to remove from a selected position 
+        //Research on splice
+
+        //Reversing an array
+        console.log(names.reverse());
+
+        //Sort helps to arrange numerical items in an ascending order
+        numbering = [3, 4, 2, 5];
+        console.log(numbering);
+        console.log(numbering.sort());
+
+        //check for compare function if you want to arrange in ascending or descending order
+        /* let sample = names.sort(function(x, y){
+        return x - y;
+        }) */
+
+        //Objects
+        let person = {
+            name: 'Ghidyon',
+            age: 23,
+            complexion: 'dark',
+            height: '5.9ft'
+        }
+
+        console.log(person.name);
+
+        //Statements
+        /* Types of Statements
+        -- Conditional Statements
+        -- Iterative Statements
+        -- Control Statements
+         */
+
+        //eg of conditional statement is if and else statement
+        /* if (//condition) {
+            //statement
+        } */
+        let g = 2;
+        if (g == 2) {
+            console.log('Yeah, g is 2');
+        } else {
+            console.log('Geraout, you\'re insane');
+        }
+
+        // || signifies OR statements 
+        // && signifies AND statements
+
+        //Switch statements
+
+        let h = 'sample';
+        switch (h) {
+            case 'food':
+                console.log('Yea, x signifies food value');
+                break;
+
+            case 'sample':
+                console.log('I\'ve gotten it');
+                break;
+
+            default:
+                console.log('Your answer is not correct');
+        }
+
+        //"\u00f7" for division symbol
+
+        //"\u00d7" for multiply symbol
+
+        //"\u003D" for equals symbol
+    </script> -->
+</body>
+
+</html>
